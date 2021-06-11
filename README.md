@@ -4,3 +4,7 @@ This replaces [my older dotfiles](https://github.com/MatthewEppelsheimer/dotfile
 
 Ignore [TEMP_sigourney.sh](TEMP_sigourney.sh), unless you want to see the sausage being made.
 
+## License
+
+[GPL v3](LICENSE.txt)
+
