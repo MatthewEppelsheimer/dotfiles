@@ -15,6 +15,7 @@ alias open='xdg-open' # Open file/URL path with preferred application
 alias bash-config="vim ~/.bash_profile"
 alias vim-config="vim ~/.vimrc"
 alias bash-reload="source ~/.bash_profile"
+alias bash-source="bash-reload"
 
 ## Turbine Aliases #
 
