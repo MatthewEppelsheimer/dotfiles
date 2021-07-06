@@ -20,8 +20,15 @@ alias bash-source="bash-reload"
 alias pem-cat="openssl x509 -text -noout -in"
 
 ## Turbine Aliases #
-
 alias nifo="npm run nifo"
+
+# Docker Aliases #
+alias dockc="docker-compose"
+alias dockcd="docker-compose down"
+alias dockcs="docker-compose stop"
+alias dockcu="docker-compose up -d"
+alias dockcps="docker-compose ps"
+alias dockce="docker-compose exec"
 
 ## Git Aliases #
 
