@@ -94,3 +94,11 @@ export cypress_password="tester123 tester"
 alias turbine-cypress-open="cd ~/dev/turbine && docker-compose up -d && cd packages/turbine-ui && npm run start && cd ../turbine-e2e && npx cypress open"
 alias nifo="npm run nifo"
 
+
+#
+# Pyenv
+#
+#
+
+PATH="/usr/local/src/pyenv/shims:$PATH"
+
