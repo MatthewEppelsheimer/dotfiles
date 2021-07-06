@@ -46,6 +46,10 @@ alias rebase="git rebase -i"
 alias rebase-ni="git rebase"
 alias wow="git status"
 
+## Kubernetes Aliases ##
+
+alias k="kubectl"
+
 #
 # SHORTCUTS
 #
