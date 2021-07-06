@@ -50,6 +50,10 @@ alias wow="git status"
 
 alias k="kubectl"
 
+## Barrier Aliases ##
+alias barrierc="barrier.barrierc"
+alias barriers="barrier.barriers"
+
 #
 # SHORTCUTS
 #
