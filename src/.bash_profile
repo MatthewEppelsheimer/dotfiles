@@ -16,6 +16,8 @@ alias bash-config="vim ~/.bash_profile"
 alias vim-config="vim ~/.vimrc"
 alias bash-reload="source ~/.bash_profile"
 alias bash-source="bash-reload"
+# https://stackpointer.io/internet/decode-pem-encoded-ssl-certificate/523/
+alias pem-cat="openssl x509 -text -noout -in"
 
 ## Turbine Aliases #
 
