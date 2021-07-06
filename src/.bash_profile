@@ -43,6 +43,7 @@ alias merge="git merge"
 alias pull="git pull"
 alias push="git push"
 alias rebase="git rebase -i"
+alias rebase-ni="git rebase"
 alias wow="git status"
 
 #
