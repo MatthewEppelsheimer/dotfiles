@@ -89,6 +89,7 @@ sigourney_setup () {
   snap install slack
   snap install spotify --classic
   snap install webstorm --classic
+  snap install helm --classic
 
   # Apps installed manually
   #
