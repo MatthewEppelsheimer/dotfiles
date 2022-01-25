@@ -55,6 +55,14 @@ sigourney_setup () {
   curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
   sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
+  # install Trivy
+  # @see https://aquasecurity.github.io/trivy/v0.17.2/installation/
+  sudo apt-get install wget apt-transport-https gnupg lsb-release
+  wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+  echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+  sudo apt-get update
+  sudo apt-get install trivy
+
   # configure Git
   git config --add core.editor vim # use Vim for commit message editing
 
