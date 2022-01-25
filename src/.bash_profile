@@ -3,6 +3,9 @@
 #
 #
 
+## Saoirse CLI
+alias s="saoirse"
+
 ## Misc #
 
 ### usage: jest-debug <path-to-test-file>
