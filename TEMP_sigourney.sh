@@ -85,6 +85,7 @@ sigourney_setup () {
   snap install code --classic # VS Code
   snap install darktable
   snap install firefox
+  snap install postman
   snap install signal-desktop
   snap install slack
   snap install spotify --classic
