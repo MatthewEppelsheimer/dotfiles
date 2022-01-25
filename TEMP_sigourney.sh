@@ -204,3 +204,13 @@ sigourney_update () {
   sudo apt-get upgrade
 }
 
+# Free up disk space
+
+sigourney_prune_logs () {
+  sudo journalctl --rotate --vacuum-time=1m
+}
+
+sigourney_prune_snaps_disabled () {
+  sudo sh /home/matthew.eppelsheimer/dotfiles/scripts/snap_prune_disabled.sh
+}
+
