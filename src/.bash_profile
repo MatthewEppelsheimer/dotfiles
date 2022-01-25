@@ -61,6 +61,11 @@ alias fixup="git rebase -i HEAD~2"
 alias rebase="git rebase -i"
 alias rebase-ni="git rebase"
 
+# Ubuntu Aliases #
+
+alias gnome-restart="killall -9 gnome-shell"
+alias gnome-reload="gnome-restart"
+
 ## Kubernetes Aliases ##
 
 alias k="kubectl"
