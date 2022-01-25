@@ -19,6 +19,10 @@ sigourney_setup () {
   # Install command line tools
   sudo apt install git
   sudo apt-get install xclip
+  sudo apt install net-tools
+  sudo apt install inetutils-traceroute
+  sudo apt install cmake
+  sudo apt install jq
 
   # Install Node Version Manager
   # https://github.com/nvm-sh/nvm
