@@ -73,7 +73,6 @@ sigourney_setup () {
   npm install --global typescript@4.2.4 # match turbine
 
   # Install GUI applications that lack snaps
-  sudo apt install gitk
   sudo apt install gnome-tweak-tool # app name: "Tweak"
 
   # Install GUI applications that have snaps
