@@ -68,8 +68,6 @@ sigourney_setup () {
 
   # Install npm packages
   npm install --global concurrently
-  npm install --global jest@^26.4.2 # match swimlane/turbine/packages/turbine-database version
-  npm install --global lerna@~4.0.0 # match swimlane/turbine version
   npm install --global nodemon
   npm install --global tslint
   npm install --global typescript@4.0.3 # match swimlane/turbine (packages; root is different as of 2021-06-03)
