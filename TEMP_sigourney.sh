@@ -126,20 +126,6 @@ TEMP_sigourney_bash_profile () {
   eval "$(ssh-agent -s)"
 }
 
-# part of daily sigourney-update
-#
-# ###########
-
-sigourney_update () {
-  # upgrade local package DB
-  # @TODO add a flag for confirmation?
-  sudo apt-get update
-  
-  # upgrade packages
-  # @TODO add a flag for confirmation?
-  sudo apt-get upgrade
-}
-
 # Free up disk space
 
 sigourney_prune_logs () {
