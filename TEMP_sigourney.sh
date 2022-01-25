@@ -81,7 +81,6 @@ sigourney_setup () {
   snap install darktable
   snap install firefox
   snap install postman
-  snap install signal-desktop
   snap install slack
   snap install spotify --classic
   snap install webstorm --classic
