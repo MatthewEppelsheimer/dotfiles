@@ -145,10 +145,12 @@ source <(kubectl completion bash)
 #
 #
 
-export cypress_username="tester" 
-export cypress_password="tester123 tester"
+export cypress_username="matthew" 
+export cypress_password="peanut butter"
 
-alias turbine-cypress-open="cd ~/dev/turbine && docker-compose up -d && cd packages/turbine-ui && npm run start && cd ../turbine-e2e && npx cypress open"
+# NOTE THESE ARE BROKEN. `npm run start` from turbine-ui runs in foreground.
+alias turbine-cypress-gui="cd ~/dev/turbine && docker-compose up -d && cd packages/turbine-ui && npm run start && cd ../turbine-e2e && npx cypress open"
+alias turbine-cypress="cd ~/dev/turbine && docker-compose up -d && cd packages/turbine-ui && npm run start && cd ../turbine-e2e && npx cypress run"
 alias nifo="npm run nifo"
 
 
