@@ -86,11 +86,6 @@ sigourney_setup () {
   snap install webstorm --classic
   snap install helm --classic
 
-  # Apps installed manually
-  #
-  # - zoom -- No snap, and apt isn't kept up to date. To upgrade: Open client > click avatar at top right > "Check for Updates"
-
-
   # Install proprietary media codecs
   # Ubuntu only packages open-source media codecs, which excludes e.g. MP3, AVI, MPEG4
   sudo apt install ubuntu-restricted-extras
@@ -104,6 +99,8 @@ sigourney_setup () {
   # - Obsidian https://github.com/obsidianmd/obsidian-releases/releases/download/v0.10.7/Obsidian-0.10.7.AppImage
   #     - https://forum.obsidian.md/t/how-to-install-obsidian-snap-on-ubuntu/2515: `sudo snap install --dangerous <file>`
   # - Anki https://apps.ankiweb.net/#linux
+  # - Zoom
+  #     - No snap, and apt isn't kept up to date. To upgrade: Open client > click avatar at top right > "Check for Updates"
 
   # Install manual dependencies for software installed without package managers
   # for Anki:
