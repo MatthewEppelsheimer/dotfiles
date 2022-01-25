@@ -52,9 +52,14 @@ alias fetch="git fetch"
 alias merge="git merge"
 alias pull="git pull"
 alias push="git push"
+alias restore="git restore"
+alias stash="git stash"
+alias wow="git status"
+
+### rebasing #
+alias fixup="git rebase -i HEAD~2"
 alias rebase="git rebase -i"
 alias rebase-ni="git rebase"
-alias wow="git status"
 
 ## Kubernetes Aliases ##
 
