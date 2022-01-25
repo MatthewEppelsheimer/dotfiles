@@ -71,8 +71,22 @@ alias gnome-reload="gnome-restart"
 alias k="kubectl"
 
 ## Barrier Aliases ##
+
 alias barrierc="barrier.barrierc"
 alias barriers="barrier.barriers"
+
+## Resilio Sync Aliases ##
+
+# Repair permissions so notes are accessible on Sigourney
+alias note-perms-fix="sudo chown -R matthew.eppelsheimer:matthew.eppelsheimer ~/Documents/Notes"
+
+## VPN Aliases ##
+
+alias vpnStatusFull='sudo systemctl status openvpn-client@swimlane'
+alias vpnStatus='vpnStatusFull | grep Active'
+alias vpnUp='sudo systemctl start openvpn-client@swimlane; vpnStatus'
+alias vpnDown='sudo systemctl stop openvpn-client@swimlane'
+
 
 #
 # SHORTCUTS
