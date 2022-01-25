@@ -113,7 +113,6 @@ sigourney_setup () {
   # Instruct user to restart
   # Required for the new "docker" usergroup to load globally
   # (`newgrp docker` only works in the local shell, and isn't what we want anyhow.)
-  # @TODO would be nice to make this automatic after notifying user with a countdown from 5
   echo "RESTART THE SYSTEM MANUALLY FOR ALL SETUP CHANGES TO TAKE EFFECT"
 }
 
