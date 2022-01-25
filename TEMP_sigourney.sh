@@ -26,7 +26,7 @@ sigourney_setup () {
 
   # Install Node Version Manager
   # https://github.com/nvm-sh/nvm
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
   # Install Docker
   # Based on: https://docs.docker.com/engine/install/ubuntu/
