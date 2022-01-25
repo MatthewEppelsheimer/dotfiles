@@ -78,7 +78,6 @@ sigourney_setup () {
   # Install GUI applications that have snaps
   snap install bitwarden
   snap install bw # bitwarden CLI
-  snap install code --classic # VS Code
   snap install darktable
   snap install firefox
   snap install postman
@@ -131,60 +130,6 @@ TEMP_sigourney_bash_profile () {
   # Run SSH agent in background
   eval "$(ssh-agent -s)"
 }
-
-# VS Code
-#
-# ##########
-
-vscode_extensions_install () {
-  # - documents
-  #   - JSON Web Tokens (JWT)
-  code --install-extension yokawasa.jwt-debugger
-  #   - Markdown
-  code --install-extension yzhang.markdown-all-in-one
-  #
-  # - features
-  #   - file type icons
-  code --install-extension vscode-icons-team.vscode-icons
-  #   - Intellisense (with AI)
-  code --install-extension visualstudioexptteam.vscodeintellicode
-  #   - REST client
-  code --install-extension humao.rest-client
-  #
-  # - frameworks
-  #   - Angular
-  code --install-extension angular.ng-template
-  #
-  # - languages
-  #   - C/C++
-  code --install-extension ms-vscode.cpptools
-  code --install-extension austin.code-gnu-global # C++ Intellisense
-  #   - python
-  code --install-extension mys-python.python
-  #   - TypeScript
-  code --install-extension steoates.autoimport
-  #
-  # - tool integration
-  #   - Docker
-  code --install-extension ms-azuretools.vscode-docker
-  #   - ESLint
-  code --install-extension dbaeumer.vscode-eslint
-  #   - git
-  code --install-extension eamodio.gitlens
-  code --install-extension donjayamannie.githistory
-  #   - TSLint ---- NOTE DEPRECATED!
-  code --install-extension ms-vscode.vscode-typescript-tslint-plugin
-  #   - Prettier
-  code --install-extension esbenp.prettier-vscode
-}
-# vscode_extensions_install
-
-vscode_configure_system () {
-	# Be sure max file watches increased!
-	# @TODO version /etc/sysctl.conf
-	# @see https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc
-}
-# vscode_configure_system
 
 # part of daily sigourney-update
 #
