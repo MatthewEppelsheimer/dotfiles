@@ -8,6 +8,9 @@ alias s="saoirse"
 
 ## Misc #
 
+### defaults
+alias ls="ls -1Al --color=always"
+
 ### usage: jest-debug <path-to-test-file>
 alias jest-debug="node --inspect=9229 $(which jest) --runInBand"
 
