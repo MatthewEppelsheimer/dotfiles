@@ -27,15 +27,18 @@ alias setup-config="vim ~/dotfiles/TEMP_sigourney.sh"
 alias pem-cat="openssl x509 -text -noout -in"
 
 ## Turbine Aliases #
+
 alias nifo="npm run nifo"
 
-# Docker Aliases #
+## Docker Aliases ##
+
 alias dockc="docker-compose"
 alias dockcd="docker-compose down"
 alias dockcs="docker-compose stop"
 alias dockcu="docker-compose up -d"
 alias dockcps="docker-compose ps"
 alias dockce="docker-compose exec"
+alias docker-nifo="docker-armageddon"
 
 ## Git Aliases #
 
@@ -71,6 +74,21 @@ alias barriers="barrier.barriers"
 # Push a branch and set local to track the new upstream
 function push-track {
     git push --set-upstream origin $(git branch --show-current)
+}
+
+## Docker shortcuts #
+
+function docker-removecontainers {
+    docker stop $(docker ps -aq)
+    docker rm $(docker ps -aq)
+}
+
+function docker-armageddon {
+    docker-removecontainers
+    docker network prune -f
+    docker rmi -f $(docker images --filter dangling=true -qa)
+    docker volume rm $(docker volume ls --filter dangling=true -q)
+    docker rmi -f $(docker images -qa)
 }
 
 
