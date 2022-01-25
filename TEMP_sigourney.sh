@@ -70,7 +70,7 @@ sigourney_setup () {
   npm install --global concurrently
   npm install --global nodemon
   npm install --global tslint
-  npm install --global typescript@4.0.3 # match swimlane/turbine (packages; root is different as of 2021-06-03)
+  npm install --global typescript@4.2.4 # match turbine
 
   # Install GUI applications that lack snaps
   sudo apt install gitk
