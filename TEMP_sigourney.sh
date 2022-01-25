@@ -76,7 +76,6 @@ sigourney_setup () {
   sudo apt install gnome-tweak-tool # app name: "Tweak"
 
   # Install GUI applications that have snaps
-  snap install barrier
   snap install bitwarden
   snap install bw # bitwarden CLI
   snap install code --classic # VS Code
