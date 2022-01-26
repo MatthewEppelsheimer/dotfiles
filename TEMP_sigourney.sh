@@ -70,6 +70,8 @@ sigourney_setup () {
 
   # configure Git
   git config --add core.editor vim # use Vim for commit message editing
+  git config --global user.email "matthew.eppelsheimer@gmail.com"
+  git config --global user.name "Matthew Eppelsheimer"
 
   # Install npm packages
   npm install --global concurrently
