@@ -47,7 +47,9 @@ sigourney_setup () {
   # See https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
   sudo groupadd docker
   sudo usermod -aG docker $USER
+  # @TODO update this; file doesn't exist
   sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+  # @TODO update this; file doesn't exist
   sudo chmod g+rwx "$HOME/.docker" -R
 
   # configure Docker to start on boot
