@@ -18,6 +18,11 @@ install_cli_tools () {
                        gnupg lsb-release
 }
 
+install_nvm () {
+  # https://github.com/nvm-sh/nvm
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+}
+
 install_nest () {
   npm i -g @nestjs/cli
   npm i -g @nestjs/core
@@ -28,10 +33,7 @@ sigourney_setup () {
   sudo apt-get update
 
   install_cli_tools
-
-  # Install Node Version Manager
-  # https://github.com/nvm-sh/nvm
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  install_nvm
 
   # Install Docker
   # Based on: https://docs.docker.com/engine/install/ubuntu/
