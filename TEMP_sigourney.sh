@@ -59,6 +59,12 @@ install_docker () {
   sudo systemctl enable docker
 }
 
+install_minikube () {
+  # @see https://minikube.sigs.k8s.io/docs/start/
+  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+}
+
 install_nest () {
   npm i -g @nestjs/cli
   npm i -g @nestjs/core
@@ -72,11 +78,7 @@ sigourney_setup () {
   install_nvm
   install_node
   install_docker
-
-  # install minikube
-  # @see https://minikube.sigs.k8s.io/docs/start/
-  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+  install_minikube
 
   # install Trivy
   # @see https://aquasecurity.github.io/trivy/v0.22.0/getting-started/installation/
