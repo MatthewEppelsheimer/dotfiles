@@ -2,7 +2,19 @@
 
 This replaces [my older dotfiles](https://github.com/MatthewEppelsheimer/dotfiles-bash-profile). This is a work in progress, but represents what I'm actively using.
 
-Ignore [TEMP_sigourney.sh](TEMP_sigourney.sh), unless you want to see the sausage being made.
+[TEMP_sigourney.sh](TEMP_sigourney.sh) is where the sausage gets made.
+
+## Installation
+
+### Install dotfiles
+
+1. Clone this to ~/dotfiles
+2. cd ~/dotfiles
+3. bash ./install.sh
+
+### Scripted setup of a new workstation
+
+1. bash ./TEMP_sigourney.sh
 
 ## License
 
