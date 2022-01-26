@@ -65,6 +65,15 @@ install_minikube () {
   sudo install minikube-linux-amd64 /usr/local/bin/minikube
 }
 
+install_trivy () {
+  # @see https://aquasecurity.github.io/trivy/v0.22.0/getting-started/installation/
+  sudo apt install -qy gnupg lsb-release
+  wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+  echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+  sudo apt-get update # required again after adding a repository
+  sudo apt-get install -qy trivy
+}
+
 install_nest () {
   npm i -g @nestjs/cli
   npm i -g @nestjs/core
@@ -79,14 +88,7 @@ sigourney_setup () {
   install_node
   install_docker
   install_minikube
-
-  # install Trivy
-  # @see https://aquasecurity.github.io/trivy/v0.22.0/getting-started/installation/
-  sudo apt install -qy gnupg lsb-release
-  wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
-  echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
-  sudo apt-get update # required again after adding a repository
-  sudo apt-get install -qy trivy
+  install_trivy
 
   # configure Git
   git config --add core.editor vim # use Vim for commit message editing
