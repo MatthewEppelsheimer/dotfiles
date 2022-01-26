@@ -63,8 +63,8 @@ sigourney_setup () {
   sudo apt install -qy gnupg lsb-release
   wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
   echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
-  sudo apt-get update
-  sudo apt-get install trivy
+  sudo apt-get update # required again after adding a repository
+  sudo apt-get install -qy trivy
 
   # configure Git
   git config --add core.editor vim # use Vim for commit message editing
