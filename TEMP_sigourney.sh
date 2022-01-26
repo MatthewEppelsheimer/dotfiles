@@ -21,6 +21,17 @@ install_cli_tools () {
 install_nvm () {
   # https://github.com/nvm-sh/nvm
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+  # make nvm command available for rest of script
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ]
+  \. "$NVM_DIR/nvm.sh"
+}
+
+install_node () {
+  nvm install node # latest
+  nvm install 16 # for Platform
+  nvm install 12 # for Turbine; as the last this'll also become current version
 }
 
 install_nest () {
@@ -34,6 +45,7 @@ sigourney_setup () {
 
   install_cli_tools
   install_nvm
+  install_node
 
   # Install Docker
   # Based on: https://docs.docker.com/engine/install/ubuntu/
