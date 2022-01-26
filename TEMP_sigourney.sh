@@ -17,12 +17,15 @@ sigourney_setup () {
   sudo apt-get update
 
   # Install command line tools
-  sudo apt install git
-  sudo apt-get install xclip
-  sudo apt install net-tools
-  sudo apt install inetutils-traceroute
-  sudo apt install cmake
-  sudo apt install jq
+  sudo apt install -qy git \
+                       xclip \
+                       net-tools \
+                       inetutils-traceroute \
+                       cmake \
+                       jq \
+                       wget \
+                       apt-transport-https \
+                       gnupg lsb-release
 
   # Install Node Version Manager
   # https://github.com/nvm-sh/nvm
@@ -31,14 +34,14 @@ sigourney_setup () {
   # Install Docker
   # Based on: https://docs.docker.com/engine/install/ubuntu/
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-  sudo add-apt-repository \
+  sudo add-apt-repository -y \
      "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
      $(lsb_release -cs) \
      stable"
-  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  sudo apt install -qy docker-ce docker-ce-cli containerd.io
 
   # Install docker-compose
-  sudo apt-get install docker-compose
+  sudo apt install -qy docker-compose
 
   # Run docker without root access
   # See https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
@@ -57,7 +60,7 @@ sigourney_setup () {
 
   # install Trivy
   # @see https://aquasecurity.github.io/trivy/v0.22.0/getting-started/installation/
-  sudo apt-get install wget apt-transport-https gnupg lsb-release
+  sudo apt install -qy gnupg lsb-release
   wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
   echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
   sudo apt-get update
@@ -73,7 +76,7 @@ sigourney_setup () {
   npm install --global typescript@4.2.4 # match turbine
 
   # Install GUI applications that lack snaps
-  sudo apt install gnome-tweak-tool # app name: "Tweak"
+  sudo apt install -qy gnome-tweaks # app name: "Tweaks"
 
   # Install GUI applications that have snaps
   snap install bitwarden
@@ -88,11 +91,7 @@ sigourney_setup () {
 
   # Install proprietary media codecs
   # Ubuntu only packages open-source media codecs, which excludes e.g. MP3, AVI, MPEG4
-  sudo apt install ubuntu-restricted-extras
-
-  # Cleanup all now-orphaned dependencies
-  sudo apt autoremove
-
+  sudo apt install -qy ubuntu-restricted-extras
 
   # SOFTWARE INSTALLED WITHOUT PACKAGE MANAGERS
   #
@@ -104,11 +103,13 @@ sigourney_setup () {
 
   # Install manual dependencies for software installed without package managers
   # for Anki:
-  sudo apt install libxcb-xinerama0
-
+  sudo apt install -qy libxcb-xinerama0
 
   # Install various tools
   install_nest
+
+  # Cleanup all now-orphaned dependencies
+  sudo apt autoremove
 
   # Instruct user to restart
   # Required for the new "docker" usergroup to load globally
