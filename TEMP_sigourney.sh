@@ -7,6 +7,17 @@
 #
 # ###########
 
+install_cli_tools () {
+  sudo apt install -qy xclip \
+                       net-tools \
+                       inetutils-traceroute \
+                       cmake \
+                       jq \
+                       wget \
+                       apt-transport-https \
+                       gnupg lsb-release
+}
+
 install_nest () {
   npm i -g @nestjs/cli
   npm i -g @nestjs/core
@@ -16,16 +27,7 @@ sigourney_setup () {
   # Update apt cache
   sudo apt-get update
 
-  # Install command line tools
-  sudo apt install -qy git \
-                       xclip \
-                       net-tools \
-                       inetutils-traceroute \
-                       cmake \
-                       jq \
-                       wget \
-                       apt-transport-https \
-                       gnupg lsb-release
+  install_cli_tools
 
   # Install Node Version Manager
   # https://github.com/nvm-sh/nvm
