@@ -76,7 +76,6 @@ sigourney_setup () {
   # Install npm packages
   npm install --global concurrently
   npm install --global nodemon
-  npm install --global tslint
   npm install --global typescript@4.2.4 # match turbine
 
   # Install GUI applications that lack snaps
