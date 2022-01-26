@@ -119,6 +119,7 @@ sigourney_setup () {
   # (`newgrp docker` only works in the local shell, and isn't what we want anyhow.)
   echo "RESTART THE SYSTEM MANUALLY FOR ALL SETUP CHANGES TO TAKE EFFECT"
 }
+sigourney_setup
 
 
 # Bash Profile SUPER TEMP
