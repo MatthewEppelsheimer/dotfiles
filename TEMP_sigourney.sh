@@ -34,20 +34,7 @@ install_node () {
   nvm install 12 # for Turbine; as the last this'll also become current version
 }
 
-install_nest () {
-  npm i -g @nestjs/cli
-  npm i -g @nestjs/core
-}
-
-sigourney_setup () {
-  # Update apt cache
-  sudo apt-get update
-
-  install_cli_tools
-  install_nvm
-  install_node
-
-  # Install Docker
+install_docker () {
   # Based on: https://docs.docker.com/engine/install/ubuntu/
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   sudo add-apt-repository -y \
@@ -70,6 +57,21 @@ sigourney_setup () {
 
   # configure Docker to start on boot
   sudo systemctl enable docker
+}
+
+install_nest () {
+  npm i -g @nestjs/cli
+  npm i -g @nestjs/core
+}
+
+sigourney_setup () {
+  # Update apt cache
+  sudo apt-get update
+
+  install_cli_tools
+  install_nvm
+  install_node
+  install_docker
 
   # install minikube
   # @see https://minikube.sigs.k8s.io/docs/start/
