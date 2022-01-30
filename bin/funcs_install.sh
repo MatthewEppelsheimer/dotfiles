@@ -9,6 +9,8 @@ function mle_install_dotfiles() {
   lns ~/dotfiles/src/.bash_profile ~/.bash_profile
   lns ~/dotfiles/src/.vimrc ~/.vimrc
   sudo lns ~/dotfiles/src/user.conf /etc/sysctl.d/user.conf
+  # apply changes in /etc/sysctl.d/user.conf
+  sudo sysctl -p --system
 }
 
 function mle_postinstall_dotfiles() {
