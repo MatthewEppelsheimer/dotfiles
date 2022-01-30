@@ -8,8 +8,10 @@ function mle_install_util_lns() {
 function mle_install_dotfiles() {
   lns ~/dotfiles/src/.bash_profile ~/.bash_profile
   lns ~/dotfiles/src/.vimrc ~/.vimrc
+  sudo lns ~/dotfiles/src/user.conf /etc/sysctl.d/user.conf
 }
 
 function mle_postinstall_dotfiles() {
   echo "Now type 'source ~/.bash_profile'."
 }
+
