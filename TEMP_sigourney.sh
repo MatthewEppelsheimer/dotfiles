@@ -127,16 +127,16 @@ sigourney_setup () {
   sudo apt install -qy gnome-tweaks # app name: "Tweaks"
 
   # Install GUI applications that have snaps
-  snap install bitwarden
-  snap install bw # bitwarden CLI
-  snap install darktable
-  snap install firefox
-  snap install postman
-  snap install rider
-  snap install slack
-  snap install spotify --classic
-  snap install webstorm --classic
-  snap install helm --classic
+  sudo snap install bitwarden
+  sudo snap install bw # bitwarden CLI
+  sudo snap install darktable
+  sudo snap install firefox
+  sudo snap install postman
+  sudo snap install rider --classic
+  sudo snap install slack --classic
+  sudo snap install spotify --classic
+  sudo snap install webstorm --classic
+  sudo snap install helm --classic
 
   # Install proprietary media codecs
   # Ubuntu only packages open-source media codecs, which excludes e.g. MP3, AVI, MPEG4
