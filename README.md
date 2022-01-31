@@ -14,6 +14,8 @@ This replaces [my older dotfiles](https://github.com/MatthewEppelsheimer/dotfile
 
 ### Scripted setup of a new workstation
 
+0. Prerequisites:
+  - git
 1. bash ./TEMP_sigourney.sh
 
 ## License
