@@ -75,6 +75,7 @@ install_trivy () {
 }
 
 install_nest () {
+  # @TODO broken; fix by adding npm to path
   npm i -g @nestjs/cli
   npm i -g @nestjs/core
 }
@@ -116,6 +117,7 @@ sigourney_setup () {
   git config --global user.name "Matthew Eppelsheimer"
 
   # Install npm packages
+  # @TODO broken; fix by adding npm to path
   npm install --global concurrently
   npm install --global nodemon
   npm install --global typescript@4.2.4 # match turbine
