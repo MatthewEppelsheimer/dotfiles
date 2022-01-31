@@ -15,7 +15,8 @@ install_cli_tools () {
                        jq \
                        wget \
                        apt-transport-https \
-                       gnupg lsb-release
+                       gnupg \
+                       lsb-release
 }
 
 install_nvm () {
@@ -67,7 +68,6 @@ install_minikube () {
 
 install_trivy () {
   # @see https://aquasecurity.github.io/trivy/v0.22.0/getting-started/installation/
-  sudo apt install -qy gnupg lsb-release
   wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
   echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
   sudo apt-get update # required again after adding a repository
