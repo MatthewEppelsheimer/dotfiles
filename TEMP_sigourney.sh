@@ -123,6 +123,7 @@ sigourney_setup () {
   npm install --global typescript@4.2.4 # match turbine
 
   # Install GUI applications that lack snaps
+  # Possibly generating a EULA ncurses form, not sure where it's coming from
   sudo apt install -qy gnome-tweaks # app name: "Tweaks"
 
   # Install GUI applications that have snaps
