@@ -79,6 +79,25 @@ install_nest () {
   npm i -g @nestjs/core
 }
 
+install_resilio_sync () {
+  # @see https://help.resilio.com/hc/en-us/articles/206178924-Installing-Sync-package-on-Linux
+  echo "deb http://linux-packages.resilio.com/resilio-sync/deb resilio-sync non-free" | sudo tee /etc/apt/sources.list.d/resilio-sync.list
+  curl -L https://linux-packages.resilio.com/resilio-sync/key.asc | sudo apt-key add
+  sudo apt-get update
+  sudo apt install -qy resilio-sync
+
+  # run as current user
+  sudo sed -i 's/WantedBy=multi-user.target/WantedBy=default.target/' /usr/lib/systemd/user/resilio-sync.service
+
+  # Alternate to running under current user, run under `rslsync` user
+  # add rslsync user to current user group
+  # sudo usermod -aG matthew.eppelsheimer rslsync
+  # sudo usermod -aG rslsync matthew.eppelsheimer
+
+  # enable automatic startup
+  sudo systemctl enable resilio-sync
+}
+
 sigourney_setup () {
   # Update apt cache
   sudo apt-get update
@@ -89,6 +108,7 @@ sigourney_setup () {
   install_docker
   install_minikube
   install_trivy
+  install_resilio_sync
 
   # configure Git
   git config --add core.editor vim # use Vim for commit message editing
