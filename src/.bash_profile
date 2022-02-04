@@ -66,6 +66,14 @@ alias rebase-ni="git rebase"
 alias gnome-restart="killall -9 gnome-shell"
 alias gnome-reload="gnome-restart"
 
+# ScreenConnect / ConnectWise Aliases #
+
+alias sc-disable="sudo systemctl disable connectwisecontrol-4121fbe4ec6b5a36" # will prevent a restart, but won't stop if already started
+alias sc-enable="sudo systemctl enable connectwisecontrol-4121fbe4ec6b5a36"
+alias sc-start="sudo systemctl start connectwisecontrol-4121fbe4ec6b5a36"
+alias sc-status="sudo systemctl list-units --all connectwisecontrol*"
+alias sc-stop="sudo systemctl stop connectwisecontrol*"
+
 ## Kubernetes Aliases ##
 
 alias k="kubectl"
