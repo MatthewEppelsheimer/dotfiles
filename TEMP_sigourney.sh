@@ -130,6 +130,7 @@ sigourney_setup () {
   sudo snap install bitwarden
   sudo snap install bw # bitwarden CLI
   sudo snap install darktable
+  sudo snap install dotnet --classic
   sudo snap install firefox
   sudo snap install postman
   sudo snap install rider --classic
