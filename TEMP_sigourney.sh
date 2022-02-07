@@ -112,7 +112,7 @@ sigourney_setup () {
   install_resilio_sync
 
   # configure Git
-  git config --add core.editor vim # use Vim for commit message editing
+  git config --global --add core.editor vim # use Vim for commit message editing
   git config --global user.email "matthew.eppelsheimer@gmail.com"
   git config --global user.name "Matthew Eppelsheimer"
 
