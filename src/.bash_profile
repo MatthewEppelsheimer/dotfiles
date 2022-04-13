@@ -51,6 +51,10 @@ alias docker-nifo="docker-armageddon"
 
 alias nexus-login="docker login nexus.swimlane.io:5000"
 
+## Podman Aliases ##
+
+alias podc="podman-compose"
+
 ## Git Aliases #
 
 alias add="git add -i"
