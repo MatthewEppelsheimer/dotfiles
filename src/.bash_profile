@@ -47,6 +47,10 @@ alias dockcps="docker-compose ps"
 alias dockce="docker-compose exec"
 alias docker-nifo="docker-armageddon"
 
+## Nexus Aliases ##
+
+alias nexus-login="docker login nexus.swimlane.io:5000"
+
 ## Git Aliases #
 
 alias add="git add -i"
