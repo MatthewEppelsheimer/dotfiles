@@ -1,4 +1,5 @@
 #
+#
 # ALIASES
 #
 #
@@ -46,6 +47,7 @@ alias add="git add -i"
 alias branch="git branch"
 alias checkout="git checkout"
 alias commit="git commit"
+alias cnv="git commit --no-verify"
 alias commit-unsafe="HUSKY_SKIP_HOOKS=1 git commit"
 alias diff="git diff"
 alias fetch="git fetch"
