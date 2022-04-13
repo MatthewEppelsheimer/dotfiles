@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # NOTE: SAUSAGE BEING MADE HERE. A LOT OF THIS DOESN'T MAKE SENSE AND/OR WON'T RUN.
 # 'Sigourney' is my primary workstation's name.
@@ -167,7 +167,6 @@ sigourney_setup () {
   echo "RESTART THE SYSTEM MANUALLY FOR ALL SETUP CHANGES TO TAKE EFFECT"
 }
 sigourney_setup
-
 
 # Bash Profile SUPER TEMP
 #
