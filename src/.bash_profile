@@ -27,6 +27,12 @@ alias setup-config="vim ~/dotfiles/TEMP_sigourney.sh"
 # https://stackpointer.io/internet/decode-pem-encoded-ssl-certificate/523/
 alias pem-cat="openssl x509 -text -noout -in"
 
+### Python/venv
+# See https://docs.python.org/3/tutorial/venv.html
+alias venv-start="source ~/.venv/bin/activate"
+alias venv-stop="deactivate"
+
+
 ## Turbine Aliases #
 
 alias nifo="npm run nifo"
@@ -164,13 +170,6 @@ alias turbine-cypress="cd ~/dev/turbine && docker-compose up -d && cd packages/t
 alias nifo="npm run nifo"
 
 
-#
-# Pyenv
-#
-#
-
-PATH="/usr/local/src/pyenv/shims:$PATH"
-
 ### COPIED FROM system's .bashrc; incorporate these in!
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
@@ -290,4 +289,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# python get-pip.py puts things here
+PATH="/home/matthew.eppelsheimer/.local/bin:$PATH"
 
