@@ -131,11 +131,15 @@ function docker-removecontainers {
     docker rm $(docker ps -aq)
 }
 
+function docker-removevolumes {
+    docker volume rm $(docker volume ls --filter dangling=true -q)
+}
+
 function docker-armageddon {
     docker-removecontainers
     docker network prune -f
+    docker-removevolumes
     docker rmi -f $(docker images --filter dangling=true -qa)
-    docker volume rm $(docker volume ls --filter dangling=true -q)
     docker rmi -f $(docker images -qa)
 }
 
