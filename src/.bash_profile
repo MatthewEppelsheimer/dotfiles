@@ -305,3 +305,6 @@ fi
 # python get-pip.py puts things here
 PATH="/home/matthew.eppelsheimer/.local/bin:$PATH"
 
+# Default to Node v12 (Turbine dep)
+nvm use 12
+
