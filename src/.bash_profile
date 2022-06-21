@@ -36,6 +36,7 @@ alias venv-stop="deactivate"
 ## Turbine Aliases #
 
 alias nifo="npm run nifo"
+alias build-no-ui="npm run build -- --ignore turbine-ui"
 
 ## Docker Aliases ##
 
