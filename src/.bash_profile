@@ -300,6 +300,6 @@ fi
 # python get-pip.py puts things here
 PATH="/home/matthew.eppelsheimer/.local/bin:$PATH"
 
-# Default to Node v12 (Turbine dep)
-nvm use 12
+# Default to Node v16 (Swimlane platform requirement)
+nvm use 16
 
