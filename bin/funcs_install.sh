@@ -13,6 +13,11 @@ function mle_install_dotfiles() {
   sudo sysctl -p --system
 }
 
+function mle_install_scripts() {
+  lns ~/dotfiles/scripts/firmware_update.sh ~/.local/bin/firmware-update
+  lns ~/dotfiles/scripts/snap_prune_disabled.sh ~/.local/bin/snap-prune-disabled
+}
+
 function mle_postinstall_dotfiles() {
   echo "Now type 'source ~/.bash_profile'."
 }

@@ -12,3 +12,8 @@ function mle_uninstall_dotfiles() {
   sudo sysctl -p --system
 }
 
+function mle_uninstall_scripts() {
+  rm ~/.local/bin/firmware-update
+  rm ~/.local/bin/snap-prune-disabled
+}
+
