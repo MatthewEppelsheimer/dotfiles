@@ -102,7 +102,7 @@ alias barriers="barrier.barriers"
 
 ## Resilio Sync Aliases ##
 
-# Repair permissions so notes are accessible on Sigourney
+# Repair Resilio Sync permissions so notes are accessible on Sigourney
 alias note-perms-fix="sudo chown -R matthew.eppelsheimer:matthew.eppelsheimer ~/Documents/Notes"
 
 ## VPN Aliases ##
