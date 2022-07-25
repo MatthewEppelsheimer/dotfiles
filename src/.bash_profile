@@ -83,6 +83,9 @@ alias rebase-ni="git rebase"
 alias gnome-restart="killall -9 gnome-shell"
 alias gnome-reload="gnome-restart"
 
+# Linux Aliases #
+alias firmware-update="sudo fwupdmgr --force refresh; sudo fwupdmgr update"
+
 # ScreenConnect / ConnectWise Aliases #
 
 alias sc-disable="sudo systemctl disable connectwisecontrol-4121fbe4ec6b5a36" # will prevent a restart, but won't stop if already started
