@@ -37,6 +37,9 @@ alias venv-stop="deactivate"
 
 alias nifo="npm run nifo"
 alias build-no-ui="npm run build -- --ignore turbine-ui"
+alias cdturb="cd ~/dev/swimlane/monolith/turbine"
+alias cdturbine="cdturb"
+alias cd-turbine="cdturb"
 
 ## Docker Aliases ##
 
